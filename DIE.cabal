@@ -1,0 +1,31 @@
+name:                DIE
+version:             0.1.0.0
+-- synopsis:
+description:         DIE isn't engine
+homepage:            https://github.com/cyberfined/DIE
+license:             BSD3
+license-file:        LICENSE
+author:              cyberfined
+maintainer:          cyberfined@protonmail.com
+copyright:           Copyright (c) cyberfined
+category:            Graphics
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable die
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  other-modules:       Linear.Vector, Linear.V2, Linear.V3, Linear.V4
+                     , Linear.Matrix, Linear.Transposable, Linear.Transform, Linear.Storable
+                     , Shader, Vertices, Utils, Camera
+                     , Texture.Classes, Texture.DDS, Texture.Utils
+  ghc-options:         -O2
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , bytestring >= 0.10 && < 1
+                     , containers >= 0.6 && < 1
+                     , binary >= 0.8 && < 1
+                     , GLFW-b >= 3.2 && < 4
+                     , OpenGL >= 3 && < 4
+                     , OpenGLRaw >= 3.3 && < 4
